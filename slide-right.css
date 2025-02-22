@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #f4f4f4;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    width: 400px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.slider {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: blue;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.form-container {
+    display: flex;
+    width: 200%;
+    transition: transform 0.5s ease;
+}
+
+.login-form, .register-form {
+    width: 50%;
+    padding: 20px;
+}
+
+.left-panel.register-active {
+    transform: translateX(100%);
+  }
+  
+  .right-panel.login-active {
+    transform: translateX(-100%);
+  }
+  
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: darkblue;
+}
