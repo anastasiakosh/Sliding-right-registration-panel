@@ -1,18 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const slider = document.getElementById("slider");
-    const formContainer = document.querySelector(".form-container");
-    let isRegisterVisible = false;
+    const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
 
-    slider.addEventListener("click", () => {
-        if (!isRegisterVisible) {
-            formContainer.style.transform = "translateX(-50%)";
-            slider.style.transform = "translateX(100%)";
-            slider.textContent = "Login";
-        } else {
-            formContainer.style.transform = "translateX(0)";
-            slider.style.transform = "translateX(0)";
-            slider.textContent = "Register";
-        }
-        isRegisterVisible = !isRegisterVisible;
-    });
+signUpButton.addEventListener('click', () => {
+    container.classList.add('right-panel-active');
 });
+
+signInButton.addEventListener('click', () => {
+    container.classList.remove('right-panel-active');
+});
+});
+

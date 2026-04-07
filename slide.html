@@ -3,43 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sliding Authentication Panel</title>
+    <title>Sliding Auth</title>
     <link rel="stylesheet" href="slide-right.css">
-    <script defer src="script.js"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="slider" id="slider">Login</div>
-        <div class="form-container">
-            <div class="login-form" id="login-form">
-                <h2>Login</h2>
-                <input type="text" placeholder="Username" required>
-                <input type="password" placeholder="Password" required>
-                <button>Login</button>
-                <p>Or login with:</p>
-                <div class="social-buttons">
-                    <button class="google">Google</button>
-                    <button class="facebook">Facebook</button>
-                    <button class="github">GitHub</button>
-                    <button class="linkedin">LinkedIn</button>
-                </div>
-            </div>
-            <div class="register-form" id="register-form">
-                <h2>Register</h2>
-                <input type="text" placeholder="Username" required>
-                <input type="email" placeholder="Email" required>
-                <input type="password" placeholder="Password" required>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Register</h1>
+                <input type="text" placeholder="Username" />
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Password" />
                 <button>Sign Up</button>
-                <p>Or sign up with:</p>
-                <div class="social-buttons">
-                    <button class="google">Google</button>
-                    <button class="facebook">Facebook</button>
-                    <button class="github">GitHub</button>
-                    <button class="linkedin">LinkedIn</button>
+                <span class="social-text">Or sign up with:</span>
+                <div class="social-container">
+                    <a href="#" class="social">Google</a>
+                    <a href="#" class="social">Facebook</a>
+                    <a href="#" class="social">GitHub</a>
+                    <a href="#" class="social">LinkedIn</a>
+                </div>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>Login</h1>
+                <input type="text" placeholder="Username" />
+                <input type="password" placeholder="Password" />
+                <button>Login</button>
+                <span class="social-text">Or login with:</span>
+                <div class="social-container">
+                    <a href="#" class="social">Google</a>
+                    <a href="#" class="social">Facebook</a>
+                    <a href="#" class="social">GitHub</a>
+                    <a href="#" class="social">LinkedIn</a>
+                </div>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <button class="ghost" id="signIn">Login</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello!</h1>
+                    <button class="ghost" id="signUp">Register</button>
                 </div>
             </div>
         </div>
     </div>
-  <script src="slide-right.js"></script>
+    <script src="slide-right.js"></script>
 </body>
 </html>
