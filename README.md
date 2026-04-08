@@ -1,1 +1,10 @@
-# Sliding-right-registration-panel
+Sliding Right Registration Panel
+
+I implemented an interactive two-sided authentication UI component for Login and Sign-Up featuring a sliding overlay panel. The project is built entirely with raw HTML, CSS, and Vanilla JavaScript. The core engineering focus was on smooth transition logic, strict layer isolation during animations, and modern responsive design without relying on external UI frameworks.
+
+Implementation Process Log:
+Step 1. DOM Structure Setup. I scaffolded the main container in HTML, breaking it down into three isolated blocks: the registration container, the login container, and the overlay container. Inside, I structured the input fields and social media authentication blocks.
+Step 2. Layout and Global Positioning. I used Flexbox on the body element to perfectly center the main container within the viewport. I assigned extended proportions to the container, making it 900px wide and 600px high to claim more screen real estate, and applied overflow hidden to clip elements outside the boundaries.
+Step 3. State Management Configuration. I implemented the state toggling logic. In JavaScript, I attached event listeners to the trigger buttons that add or remove an active class on the main container. I tied CSS transform translateX properties to this class, forcing the forms and the overlay to slide horizontally on the X-axis.
+Step 4. Visual Collision Resolution. During the sliding animation, I identified a layer collision bug where input fields bled through the moving overlay. I engineered a custom keyframe animation that strictly synchronizes opacity with z-index swapping. By flipping the z-index exactly at the 50 percent mark of the animation duration, I completely isolated the left and right forms to prevent visual clipping.
+Step 5. UI and UX Redesign. I modernized the aesthetics by softening the sharp edges. I applied a 24px border radius to the main container, a 12px radius to the input fields and social buttons, and a 20px pill-shape radius to the primary call-to-action buttons. Finally, I repainted the social media fields to a neutral light gray background with dark text, reducing their visual weight so they do not compete with the primary blue action buttons.
